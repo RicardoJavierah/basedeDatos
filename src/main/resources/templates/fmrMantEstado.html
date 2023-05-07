@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th ="http://www.thymeleaf.org">
+<head th:insert = "layout::head">
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<nav th:insert></nav>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Codigo</th>
+      <th scope="col">Descripcion</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr th:each="estado:${listaEstado}">
+      <th scope="row">1</th>
+      <td th:text="${estado.idestado}">Nombre</td>
+      <td th:text="${estado.descestado}">Apellido</td>
+    </tr>
+
+  </tbody>
+</table>
+
+</body>
+</html>
